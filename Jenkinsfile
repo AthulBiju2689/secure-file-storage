@@ -14,21 +14,21 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building Docker image...'
-                sh 'docker compose build'
+                sh 'docker compose -p secure-file-storage build'
             }
         }
 
         stage('Deploy') {
             steps {
                 echo 'Starting application...'
-                sh 'docker compose up -d'
+                sh 'docker compose up -p secure-file-storage up -d'
             }
         }
 
         stage('Check Containers') {
             steps {
                 echo 'Checking container status...'
-                sh 'docker compose ps'
+                sh 'docker compose -p secure-file-storage ps'
             }
         }
 
