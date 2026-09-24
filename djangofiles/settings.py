@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-#^+i^24q*lzu(-4ch417jsax-45wzbkf4^y%m%2e0va4%2z(!n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.134.187',
+    'localhost',
+    '127.0.0.1',]
 
 
 # Application definition
@@ -50,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'secure_file_storage.urls'
+ROOT_URLCONF = 'djangofiles.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'secure_file_storage.wsgi.application'
+WSGI_APPLICATION = 'djangofiles.wsgi.application'
 
 
 # Database
@@ -79,9 +81,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         #'NAME': BASE_DIR / 'db.sqlite3',
         'NAME':'securefile',
-        'HOST':'localhost',
+        'HOST':'mysql',
         'USER':'root',
-        'PASSWORD':'',
+        'PASSWORD':'root',
         'PORT':'3306',
         'OPTIONS':{
             'init_command':"SET sql_mode='STRICT_TRANS_TABLES'",
