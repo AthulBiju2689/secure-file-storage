@@ -21,7 +21,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Starting application...'
-                sh 'docker compose up -p secure-file-storage up -d'
+                sh 'docker compose -p secure-file-storage up -d'
             }
         }
 
