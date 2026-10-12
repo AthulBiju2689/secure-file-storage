@@ -1529,3 +1529,13 @@ section {
   color: #fff;
   text-decoration: none;
 }
+/* Custom red theme for primary buttons */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    color: #ffffff !important;
+}
